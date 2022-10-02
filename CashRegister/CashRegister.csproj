@@ -125,5 +125,11 @@
   <ItemGroup>
     <None Include="Resources\MagicalSound.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hagrid.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonPress.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

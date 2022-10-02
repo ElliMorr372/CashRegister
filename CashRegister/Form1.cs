@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Linq.Expressions;
 using System.Media;
+using System.Drawing.Drawing2D;
 
 namespace CashRegister
 {
@@ -39,7 +40,11 @@ namespace CashRegister
             calculateChangeButton.Enabled = false;
             printReceiptButton.Enabled = false;
             newOrderButton.Enabled = false;
-            receiptOutput.Size = new Size(0, 313);
+            hiddenMessageOutput.Visible = false;
+
+            //set receipt to an invisible height
+            receiptOutput.Size = new Size(242, 0);
+            //hiddenMessageOutput.Size = new Size(248, 0);
         }
 
         private void calculateTotalsButton_Click(object sender, EventArgs e)
@@ -50,6 +55,10 @@ namespace CashRegister
 
             try
             {
+                //reset robe input to clear error
+                //robeNumInput.Size = new Size(62, robeNumInput.Height);
+                //robeNumInput.Location = new Point(272, 211);
+
                 //get the inputs
                 wandNum = Convert.ToDouble(wandNumInput.Text);
                 robeNum = Convert.ToDouble(robeNumInput.Text);
@@ -65,22 +74,28 @@ namespace CashRegister
                 taxAmountOutput.Text = $"{taxAmount.ToString("C")}";
                 totalOutput.Text = $"{total.ToString("C")}";
 
-                //enable next button
+                //enable change button
                 calculateChangeButton.Enabled = true;
             }
             catch
             {
-                wandNumInput.Text = "";
-                robeNumInput.Text = "Input";
-                bookNumInput.Text = "Error";
+                //display input error
+                wandNumInput.Text = "Input";
+                robeNumInput.Text = "Error";
+                bookNumInput.Text = "  !!!!!";
+                //robeNumInput.Size = new Size(80, robeNumInput.Height);
+                //robeNumInput.Location = new Point(robeNumInput.Location.X - 18, robeNumInput.Location.Y);
             }
         }
 
         private void calculateChangeButton_Click(object sender, EventArgs e)
         {
-           //play magical sound
+            //play magical sound
             SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.MagicalSound);
             alertPlayer.Play();
+
+            //get the inputs
+            tendered = Convert.ToDouble(tenderedInput.Text);
 
             //Check for insufficient funds
             if (tendered < total)
@@ -91,8 +106,9 @@ namespace CashRegister
             }
             else
             {
-                //get the inputs
-                tendered = Convert.ToDouble(tenderedInput.Text);
+                //reset tendered input length
+                tenderedInput.Size = new Size(43, tenderedInput.Height);
+                tenderedInput.Location = new Point(181, 356);
 
                 //calculate the change
                 change = tendered - total;
@@ -100,26 +116,26 @@ namespace CashRegister
                 //output the change
                 changeOutput.Text = $"{change.ToString("C")}";
 
-                //enable next button
+                //enable receipt button
                 printReceiptButton.Enabled = true;
-
-                //reset tendered input length
-               tenderedInput.Size = new Size(43, tenderedInput.Height);
             }
         }
 
         private void printReceiptButton_Click(object sender, EventArgs e)
         {
+            //disable print receipt button
+            printReceiptButton.Enabled = false;
+
             //play printing sound
             SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.PhotocopySound);
             alertPlayer.Play();
 
-            //display all information on reciept using an array
+            //display reciept using an array
             string[] ReceiptStrings = new string[13];
             ReceiptStrings[0] = $"      The Shop That Must";
             ReceiptStrings[1] = $"\n        Not Be Named";
-            ReceiptStrings[2] = $"\n\n  Order Number: 3567";
-            ReceiptStrings[3] = $"\n  September 29th, 2022";
+            ReceiptStrings[2] = $"\n\n  Order Number: 717";
+            ReceiptStrings[3] = $"\n  October 3rd, 2022";
             ReceiptStrings[4] = $"\n\n  Wands     x{wandNum} @ {wandPrice.ToString("C")}";
             ReceiptStrings[5] = $"\n  Robes     x{robeNum} @ {robePrice.ToString("C")}";
             ReceiptStrings[6] = $"\n  Books     x{bookNum} @ {bookPrice.ToString("C")}";
@@ -132,12 +148,14 @@ namespace CashRegister
 
             for (int i = 0; i < ReceiptStrings.Length; i++)
             {
+                receiptOutput.Height = receiptOutput.Height + 25;
+                receiptOutput.Size = new Size(receiptOutput.Width, receiptOutput.Height);
                 receiptOutput.Text += ReceiptStrings[i];
                 Refresh();
                 Thread.Sleep(450);
             }
 
-            //enable next button
+            //enable new order button
             newOrderButton.Enabled = true;
         }
 
@@ -154,11 +172,14 @@ namespace CashRegister
             changeOutput.Text = $"";
             receiptOutput.Text = $"";
 
+            //reset receipt position
+            receiptOutput.Size = new Size(242, 0);
+
             //clear all inputs
-            wandNumInput.Text = $"";
-            robeNumInput.Text = $"";
-            bookNumInput.Text = $"";
-            tenderedInput.Text = $"";
+            wandNumInput.Text = $"0";
+            robeNumInput.Text = $"0";
+            bookNumInput.Text = $"0";
+            tenderedInput.Text = $"0";
 
             //reset all variables
             wandNum = 0;
@@ -170,10 +191,59 @@ namespace CashRegister
             tendered = 0;
             change = 0;
 
-            //make change, recipet, and order button disabled
+            //disable change, recipet, and new order button
             calculateChangeButton.Enabled = false;
             printReceiptButton.Enabled = false;
             newOrderButton.Enabled = false;
+
+            //enable hidden message
+            //hiddenMessageOutput.Enabled = false;
+        }
+
+        private void gryffindorPicture2_Click(object sender, EventArgs e)
+        {
+            //play magical sound
+            SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.PictureButtonPress);
+            alertPlayer.Play();
+
+            //make hidden message label visible
+            hiddenMessageOutput.Visible = true;
+
+            //display hidden message with an array
+            string[] HiddenMessageStrings = new string[11];
+            HiddenMessageStrings[0] = $"\nWelcome";
+            HiddenMessageStrings[1] = $"\nand";
+            HiddenMessageStrings[2] = $"\nCongratulations!";
+            HiddenMessageStrings[3] = $"\n\nYou found the secret";
+            HiddenMessageStrings[4] = $"\nmessage only for";
+            HiddenMessageStrings[5] = $"\nwitches and wizards.";
+            HiddenMessageStrings[6] = $"\n\nNow...";
+            HiddenMessageStrings[7] = $"\ngo forth on your";
+            HiddenMessageStrings[8] = $"\nmagical journey!!";
+            HiddenMessageStrings[9] = $"\n";
+            HiddenMessageStrings[10] = $"\n";
+
+            //use for loop to print hidden message one line at a time
+            for (int i = 0; i < HiddenMessageStrings.Length; i++)
+            {
+                //hiddenMessageOutput.Height = receiptOutput.Height + 25;
+                //hiddenMessageOutput.Size = new Size(hiddenMessageOutput.Width, hiddenMessageOutput.Height);
+                hiddenMessageOutput.Text += HiddenMessageStrings[i];
+                Refresh();
+                Thread.Sleep(400);
+            }
+
+            //change border style when message array is finished
+            hiddenMessageOutput.BorderStyle = BorderStyle.Fixed3D;
+
+            //allow user to read for 6 seconds
+            Refresh();
+            Thread.Sleep(6000);
+
+            //clear, reset, and disable hidden message
+            hiddenMessageOutput.Visible = false;
+            hiddenMessageOutput.Text = $"";
+            //hiddenMessageOutput.Enabled = false;
         }
     }
 }

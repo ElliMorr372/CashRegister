@@ -59,17 +59,18 @@
             this.changeLabel = new System.Windows.Forms.Label();
             this.tenderedInput = new System.Windows.Forms.TextBox();
             this.receiptOutput = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.glassesIcon = new System.Windows.Forms.PictureBox();
+            this.cauldronIcon = new System.Windows.Forms.PictureBox();
+            this.hogwartsIcon = new System.Windows.Forms.PictureBox();
+            this.hiddenMessageOutput = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gryffindorPicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hogwartsSymbol2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hogwartsSymbol1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gryffindorPicture3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gryffindorPicture2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glassesIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cauldronIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hogwartsIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -167,6 +168,7 @@
             this.gryffindorPicture2.Size = new System.Drawing.Size(158, 139);
             this.gryffindorPicture2.TabIndex = 11;
             this.gryffindorPicture2.TabStop = false;
+            this.gryffindorPicture2.Click += new System.EventHandler(this.gryffindorPicture2_Click);
             // 
             // newOrderButton
             // 
@@ -445,49 +447,61 @@
             // 
             // receiptOutput
             // 
-            this.receiptOutput.BackColor = System.Drawing.Color.Transparent;
+            this.receiptOutput.BackColor = System.Drawing.Color.DarkRed;
             this.receiptOutput.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptOutput.ForeColor = System.Drawing.Color.Black;
             this.receiptOutput.Image = global::CashRegister.Properties.Resources.Paper2;
-            this.receiptOutput.Location = new System.Drawing.Point(283, 104);
+            this.receiptOutput.Location = new System.Drawing.Point(284, 102);
             this.receiptOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.receiptOutput.Name = "receiptOutput";
-            this.receiptOutput.Size = new System.Drawing.Size(242, 313);
+            this.receiptOutput.Size = new System.Drawing.Size(242, 325);
             this.receiptOutput.TabIndex = 39;
             // 
-            // pictureBox1
+            // glassesIcon
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::CashRegister.Properties.Resources._2730334_colour_glasses_harry_potter_scar_icon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(355, 419);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 55);
-            this.pictureBox1.TabIndex = 40;
-            this.pictureBox1.TabStop = false;
+            this.glassesIcon.BackColor = System.Drawing.Color.Transparent;
+            this.glassesIcon.BackgroundImage = global::CashRegister.Properties.Resources._2730334_colour_glasses_harry_potter_scar_icon;
+            this.glassesIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.glassesIcon.Location = new System.Drawing.Point(355, 432);
+            this.glassesIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.glassesIcon.Name = "glassesIcon";
+            this.glassesIcon.Size = new System.Drawing.Size(101, 46);
+            this.glassesIcon.TabIndex = 40;
+            this.glassesIcon.TabStop = false;
             // 
-            // pictureBox2
+            // cauldronIcon
             // 
-            this.pictureBox2.BackgroundImage = global::CashRegister.Properties.Resources._2730328_cauldron_colour_harry_pot_potter_icon;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(444, 423);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(81, 51);
-            this.pictureBox2.TabIndex = 41;
-            this.pictureBox2.TabStop = false;
+            this.cauldronIcon.BackgroundImage = global::CashRegister.Properties.Resources._2730328_cauldron_colour_harry_pot_potter_icon;
+            this.cauldronIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cauldronIcon.Location = new System.Drawing.Point(444, 432);
+            this.cauldronIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.cauldronIcon.Name = "cauldronIcon";
+            this.cauldronIcon.Size = new System.Drawing.Size(81, 46);
+            this.cauldronIcon.TabIndex = 41;
+            this.cauldronIcon.TabStop = false;
             // 
-            // pictureBox3
+            // hogwartsIcon
             // 
-            this.pictureBox3.BackgroundImage = global::CashRegister.Properties.Resources._2730341_castle_colour_harry_hogwarts_potter_icon;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(286, 428);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 46);
-            this.pictureBox3.TabIndex = 42;
-            this.pictureBox3.TabStop = false;
+            this.hogwartsIcon.BackgroundImage = global::CashRegister.Properties.Resources._2730341_castle_colour_harry_hogwarts_potter_icon;
+            this.hogwartsIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.hogwartsIcon.Location = new System.Drawing.Point(286, 432);
+            this.hogwartsIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.hogwartsIcon.Name = "hogwartsIcon";
+            this.hogwartsIcon.Size = new System.Drawing.Size(86, 46);
+            this.hogwartsIcon.TabIndex = 42;
+            this.hogwartsIcon.TabStop = false;
+            // 
+            // hiddenMessageOutput
+            // 
+            this.hiddenMessageOutput.BackColor = System.Drawing.Color.DarkRed;
+            this.hiddenMessageOutput.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hiddenMessageOutput.ForeColor = System.Drawing.Color.Gold;
+            this.hiddenMessageOutput.Location = new System.Drawing.Point(280, 102);
+            this.hiddenMessageOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hiddenMessageOutput.Name = "hiddenMessageOutput";
+            this.hiddenMessageOutput.Size = new System.Drawing.Size(248, 325);
+            this.hiddenMessageOutput.TabIndex = 43;
+            this.hiddenMessageOutput.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Form1
             // 
@@ -495,9 +509,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(748, 578);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.hiddenMessageOutput);
+            this.Controls.Add(this.hogwartsIcon);
+            this.Controls.Add(this.cauldronIcon);
+            this.Controls.Add(this.glassesIcon);
             this.Controls.Add(this.receiptOutput);
             this.Controls.Add(this.tenderedInput);
             this.Controls.Add(this.changeOutput);
@@ -537,9 +552,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.hogwartsSymbol1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gryffindorPicture3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gryffindorPicture2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glassesIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cauldronIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hogwartsIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -577,9 +592,10 @@
         private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.TextBox tenderedInput;
         private System.Windows.Forms.Label receiptOutput;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox glassesIcon;
+        private System.Windows.Forms.PictureBox cauldronIcon;
+        private System.Windows.Forms.PictureBox hogwartsIcon;
+        private System.Windows.Forms.Label hiddenMessageOutput;
     }
 }
 
