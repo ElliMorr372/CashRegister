@@ -16,6 +16,7 @@ namespace CashRegister
 {
     public partial class Form1 : Form
     {
+        //set variables for prices, number of items, tax, subtotal, total, tendered, and change
         double wandPrice = 175.40;
         double robePrice = 145.50;
         double bookPrice = 38.75;
@@ -28,6 +29,10 @@ namespace CashRegister
         double total = 0;
         double tendered = 0;
         double change = 0;
+
+        //create booleans for the reciept and hidden message
+        Boolean receiptPrinted = false;
+        Boolean messageShown = false;
         public Form1()
         {
             InitializeComponent();
@@ -44,9 +49,7 @@ namespace CashRegister
 
             //set receipt to an invisible height
             receiptOutput.Size = new Size(242, 0);
-            //hiddenMessageOutput.Size = new Size(248, 0);
         }
-
         private void calculateTotalsButton_Click(object sender, EventArgs e)
         {
             //play magical sound
@@ -55,10 +58,6 @@ namespace CashRegister
 
             try
             {
-                //reset robe input to clear error
-                //robeNumInput.Size = new Size(62, robeNumInput.Height);
-                //robeNumInput.Location = new Point(272, 211);
-
                 //get the inputs
                 wandNum = Convert.ToDouble(wandNumInput.Text);
                 robeNum = Convert.ToDouble(robeNumInput.Text);
@@ -83,11 +82,8 @@ namespace CashRegister
                 wandNumInput.Text = "Input";
                 robeNumInput.Text = "Error";
                 bookNumInput.Text = "  !!!!!";
-                //robeNumInput.Size = new Size(80, robeNumInput.Height);
-                //robeNumInput.Location = new Point(robeNumInput.Location.X - 18, robeNumInput.Location.Y);
             }
         }
-
         private void calculateChangeButton_Click(object sender, EventArgs e)
         {
             //play magical sound
@@ -123,40 +119,50 @@ namespace CashRegister
 
         private void printReceiptButton_Click(object sender, EventArgs e)
         {
-            //disable print receipt button
-            printReceiptButton.Enabled = false;
-
-            //play printing sound
-            SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.PhotocopySound);
-            alertPlayer.Play();
-
-            //display reciept using an array
-            string[] ReceiptStrings = new string[13];
-            ReceiptStrings[0] = $"      The Shop That Must";
-            ReceiptStrings[1] = $"\n        Not Be Named";
-            ReceiptStrings[2] = $"\n\n  Order Number: 717";
-            ReceiptStrings[3] = $"\n  October 3rd, 2022";
-            ReceiptStrings[4] = $"\n\n  Wands     x{wandNum} @ {wandPrice.ToString("C")}";
-            ReceiptStrings[5] = $"\n  Robes     x{robeNum} @ {robePrice.ToString("C")}";
-            ReceiptStrings[6] = $"\n  Books     x{bookNum} @ {bookPrice.ToString("C")}";
-            ReceiptStrings[7] = $"\n\n  Subtotal     {subtotal.ToString("C")}";
-            ReceiptStrings[8] = $"\n  Tax          {taxAmount.ToString("C")}";
-            ReceiptStrings[9] = $"\n  Total        {total.ToString("C")}";
-            ReceiptStrings[10] = $"\n\n  Tendered     {tendered.ToString("C")}";
-            ReceiptStrings[11] = $"\n  Change       {change.ToString("C")}";
-            ReceiptStrings[12] = $"\n\n      Have A Great Day!";
-
-            for (int i = 0; i < ReceiptStrings.Length; i++)
+            if (receiptPrinted == false)
             {
-                receiptOutput.Height = receiptOutput.Height + 25;
-                receiptOutput.Size = new Size(receiptOutput.Width, receiptOutput.Height);
-                receiptOutput.Text += ReceiptStrings[i];
-                Refresh();
-                Thread.Sleep(450);
-            }
 
-            //enable new order button
-            newOrderButton.Enabled = true;
+                //disable print receipt button
+                printReceiptButton.Enabled = false;
+
+                //play printing sound
+                SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.PhotocopySound);
+                alertPlayer.Play();
+
+                //display reciept using an array
+                string[] ReceiptStrings = new string[13];
+                ReceiptStrings[0] = $"      The Shop That Must";
+                ReceiptStrings[1] = $"\n        Not Be Named";
+                ReceiptStrings[2] = $"\n\n  Order Number: 717";
+                ReceiptStrings[3] = $"\n  October 3rd, 2022";
+                ReceiptStrings[4] = $"\n\n  Wands     x{wandNum} @ {wandPrice.ToString("C")}";
+                ReceiptStrings[5] = $"\n  Robes     x{robeNum} @ {robePrice.ToString("C")}";
+                ReceiptStrings[6] = $"\n  Books     x{bookNum} @ {bookPrice.ToString("C")}";
+                ReceiptStrings[7] = $"\n\n  Subtotal       {subtotal.ToString("C")}";
+                ReceiptStrings[8] = $"\n  Tax            {taxAmount.ToString("C")}";
+                ReceiptStrings[9] = $"\n  Total          {total.ToString("C")}";
+                ReceiptStrings[10] = $"\n\n  Tendered       {tendered.ToString("C")}";
+                ReceiptStrings[11] = $"\n  Change         {change.ToString("C")}";
+                ReceiptStrings[12] = $"\n\n      Have A Great Day!";
+
+                for (int i = 0; i < ReceiptStrings.Length; i++)
+                {
+                    receiptOutput.Height = receiptOutput.Height + 25;
+                    receiptOutput.Size = new Size(receiptOutput.Width, receiptOutput.Height);
+                    receiptOutput.Text += ReceiptStrings[i];
+                    Refresh();
+                    Thread.Sleep(450);
+                }
+
+                //enable new order button
+                newOrderButton.Enabled = true;
+
+                //set receipt boolean to true
+                receiptPrinted = true;
+            }
+            else
+            {
+            }
         }
 
         private void newOrderButton_Click(object sender, EventArgs e)
@@ -191,59 +197,64 @@ namespace CashRegister
             tendered = 0;
             change = 0;
 
-            //disable change, recipet, and new order button
+            //disable change, receipt, and new order button
             calculateChangeButton.Enabled = false;
             printReceiptButton.Enabled = false;
             newOrderButton.Enabled = false;
 
-            //enable hidden message
-            //hiddenMessageOutput.Enabled = false;
+            //reset booleans to false
+            messageShown = false;
+            receiptPrinted = false;
         }
 
         private void gryffindorPicture2_Click(object sender, EventArgs e)
         {
-            //play magical sound
-            SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.PictureButtonPress);
-            alertPlayer.Play();
-
-            //make hidden message label visible
-            hiddenMessageOutput.Visible = true;
-
-            //display hidden message with an array
-            string[] HiddenMessageStrings = new string[11];
-            HiddenMessageStrings[0] = $"\nWelcome";
-            HiddenMessageStrings[1] = $"\nand";
-            HiddenMessageStrings[2] = $"\nCongratulations!";
-            HiddenMessageStrings[3] = $"\n\nYou found the secret";
-            HiddenMessageStrings[4] = $"\nmessage only for";
-            HiddenMessageStrings[5] = $"\nwitches and wizards.";
-            HiddenMessageStrings[6] = $"\n\nNow...";
-            HiddenMessageStrings[7] = $"\ngo forth on your";
-            HiddenMessageStrings[8] = $"\nmagical journey!!";
-            HiddenMessageStrings[9] = $"\n";
-            HiddenMessageStrings[10] = $"\n";
-
-            //use for loop to print hidden message one line at a time
-            for (int i = 0; i < HiddenMessageStrings.Length; i++)
+            if (messageShown == false)
             {
-                //hiddenMessageOutput.Height = receiptOutput.Height + 25;
-                //hiddenMessageOutput.Size = new Size(hiddenMessageOutput.Width, hiddenMessageOutput.Height);
-                hiddenMessageOutput.Text += HiddenMessageStrings[i];
+                //play magical sound
+                SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.PictureButtonPress);
+                alertPlayer.Play();
+
+                //make hidden message label visible
+                hiddenMessageOutput.Visible = true;
+
+                //display hidden message with an array
+                string[] HiddenMessageStrings = new string[11];
+                HiddenMessageStrings[0] = $"\nWelcome";
+                HiddenMessageStrings[1] = $"\nand";
+                HiddenMessageStrings[2] = $"\nCongratulations!";
+                HiddenMessageStrings[3] = $"\n\nYou found the secret";
+                HiddenMessageStrings[4] = $"\nmessage only for";
+                HiddenMessageStrings[5] = $"\nwitches and wizards.";
+                HiddenMessageStrings[6] = $"\n\nNow...";
+                HiddenMessageStrings[7] = $"\ngo forth on your";
+                HiddenMessageStrings[8] = $"\nmagical journey!!";
+                HiddenMessageStrings[9] = $"\n";
+                HiddenMessageStrings[10] = $"\n";
+
+                //use for loop to print hidden message one line at a time
+                for (int i = 0; i < HiddenMessageStrings.Length; i++)
+                {
+                    hiddenMessageOutput.Text += HiddenMessageStrings[i];
+                    Refresh();
+                    Thread.Sleep(400);
+                }
+
+                //change border style when message array is finished
+                hiddenMessageOutput.BorderStyle = BorderStyle.Fixed3D;
+
+                //allow user to read for 6 seconds
                 Refresh();
-                Thread.Sleep(400);
+                Thread.Sleep(6000);
+
+                //clear, reset, and disable hidden message
+                hiddenMessageOutput.Visible = false;
+                hiddenMessageOutput.Text = $"";
+                messageShown = true;
             }
-
-            //change border style when message array is finished
-            hiddenMessageOutput.BorderStyle = BorderStyle.Fixed3D;
-
-            //allow user to read for 6 seconds
-            Refresh();
-            Thread.Sleep(6000);
-
-            //clear, reset, and disable hidden message
-            hiddenMessageOutput.Visible = false;
-            hiddenMessageOutput.Text = $"";
-            //hiddenMessageOutput.Enabled = false;
+            else
+            {
+            }
         }
     }
 }

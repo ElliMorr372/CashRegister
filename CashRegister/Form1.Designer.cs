@@ -78,10 +78,9 @@
             this.titleLabel.BackColor = System.Drawing.Color.Black;
             this.titleLabel.Font = new System.Drawing.Font("Ravie", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.Gold;
-            this.titleLabel.Location = new System.Drawing.Point(0, -1);
-            this.titleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titleLabel.Location = new System.Drawing.Point(0, -2);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(750, 92);
+            this.titleLabel.Size = new System.Drawing.Size(1125, 142);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "The Shop That Must Not Be Named";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,10 +90,9 @@
             this.gryffindorPicture1.BackColor = System.Drawing.Color.Gold;
             this.gryffindorPicture1.BackgroundImage = global::CashRegister.Properties.Resources.GryffindorAesthetic;
             this.gryffindorPicture1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gryffindorPicture1.Location = new System.Drawing.Point(575, 110);
-            this.gryffindorPicture1.Margin = new System.Windows.Forms.Padding(2);
+            this.gryffindorPicture1.Location = new System.Drawing.Point(862, 169);
             this.gryffindorPicture1.Name = "gryffindorPicture1";
-            this.gryffindorPicture1.Size = new System.Drawing.Size(149, 112);
+            this.gryffindorPicture1.Size = new System.Drawing.Size(224, 172);
             this.gryffindorPicture1.TabIndex = 4;
             this.gryffindorPicture1.TabStop = false;
             // 
@@ -103,10 +101,9 @@
             this.hogwartsSymbol2.BackColor = System.Drawing.Color.Black;
             this.hogwartsSymbol2.BackgroundImage = global::CashRegister.Properties.Resources.HogwartsSymbol;
             this.hogwartsSymbol2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.hogwartsSymbol2.Location = new System.Drawing.Point(657, 15);
-            this.hogwartsSymbol2.Margin = new System.Windows.Forms.Padding(2);
+            this.hogwartsSymbol2.Location = new System.Drawing.Point(986, 23);
             this.hogwartsSymbol2.Name = "hogwartsSymbol2";
-            this.hogwartsSymbol2.Size = new System.Drawing.Size(69, 63);
+            this.hogwartsSymbol2.Size = new System.Drawing.Size(104, 97);
             this.hogwartsSymbol2.TabIndex = 6;
             this.hogwartsSymbol2.TabStop = false;
             // 
@@ -114,10 +111,9 @@
             // 
             this.dividerLabel1.BackColor = System.Drawing.Color.Gold;
             this.dividerLabel1.ForeColor = System.Drawing.Color.Gold;
-            this.dividerLabel1.Location = new System.Drawing.Point(542, 104);
-            this.dividerLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dividerLabel1.Location = new System.Drawing.Point(813, 160);
             this.dividerLabel1.Name = "dividerLabel1";
-            this.dividerLabel1.Size = new System.Drawing.Size(10, 420);
+            this.dividerLabel1.Size = new System.Drawing.Size(15, 646);
             this.dividerLabel1.TabIndex = 7;
             this.dividerLabel1.Text = "label1";
             // 
@@ -126,10 +122,9 @@
             this.hogwartsSymbol1.BackColor = System.Drawing.Color.Black;
             this.hogwartsSymbol1.BackgroundImage = global::CashRegister.Properties.Resources.HogwartsSymbol;
             this.hogwartsSymbol1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.hogwartsSymbol1.Location = new System.Drawing.Point(29, 15);
-            this.hogwartsSymbol1.Margin = new System.Windows.Forms.Padding(2);
+            this.hogwartsSymbol1.Location = new System.Drawing.Point(44, 23);
             this.hogwartsSymbol1.Name = "hogwartsSymbol1";
-            this.hogwartsSymbol1.Size = new System.Drawing.Size(68, 63);
+            this.hogwartsSymbol1.Size = new System.Drawing.Size(102, 97);
             this.hogwartsSymbol1.TabIndex = 8;
             this.hogwartsSymbol1.TabStop = false;
             // 
@@ -138,10 +133,9 @@
             this.gryffindorPicture3.BackColor = System.Drawing.Color.Gold;
             this.gryffindorPicture3.BackgroundImage = global::CashRegister.Properties.Resources.GryffindorSymbol2;
             this.gryffindorPicture3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gryffindorPicture3.Location = new System.Drawing.Point(592, 339);
-            this.gryffindorPicture3.Margin = new System.Windows.Forms.Padding(2);
+            this.gryffindorPicture3.Location = new System.Drawing.Point(888, 522);
             this.gryffindorPicture3.Name = "gryffindorPicture3";
-            this.gryffindorPicture3.Size = new System.Drawing.Size(119, 166);
+            this.gryffindorPicture3.Size = new System.Drawing.Size(178, 255);
             this.gryffindorPicture3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.gryffindorPicture3.TabIndex = 9;
             this.gryffindorPicture3.TabStop = false;
@@ -150,10 +144,9 @@
             // 
             this.backsplashLabel.BackColor = System.Drawing.Color.Gold;
             this.backsplashLabel.ForeColor = System.Drawing.Color.Gold;
-            this.backsplashLabel.Location = new System.Drawing.Point(568, 104);
-            this.backsplashLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.backsplashLabel.Location = new System.Drawing.Point(852, 160);
             this.backsplashLabel.Name = "backsplashLabel";
-            this.backsplashLabel.Size = new System.Drawing.Size(165, 420);
+            this.backsplashLabel.Size = new System.Drawing.Size(248, 646);
             this.backsplashLabel.TabIndex = 10;
             this.backsplashLabel.Text = "label1";
             // 
@@ -162,10 +155,9 @@
             this.gryffindorPicture2.BackColor = System.Drawing.Color.Gold;
             this.gryffindorPicture2.BackgroundImage = global::CashRegister.Properties.Resources.HarryPotterQuidditch;
             this.gryffindorPicture2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gryffindorPicture2.Location = new System.Drawing.Point(568, 209);
-            this.gryffindorPicture2.Margin = new System.Windows.Forms.Padding(2);
+            this.gryffindorPicture2.Location = new System.Drawing.Point(852, 322);
             this.gryffindorPicture2.Name = "gryffindorPicture2";
-            this.gryffindorPicture2.Size = new System.Drawing.Size(158, 139);
+            this.gryffindorPicture2.Size = new System.Drawing.Size(237, 214);
             this.gryffindorPicture2.TabIndex = 11;
             this.gryffindorPicture2.TabStop = false;
             this.gryffindorPicture2.Click += new System.EventHandler(this.gryffindorPicture2_Click);
@@ -179,10 +171,9 @@
             this.newOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newOrderButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newOrderButton.ForeColor = System.Drawing.Color.Gold;
-            this.newOrderButton.Location = new System.Drawing.Point(320, 487);
-            this.newOrderButton.Margin = new System.Windows.Forms.Padding(2);
+            this.newOrderButton.Location = new System.Drawing.Point(480, 749);
             this.newOrderButton.Name = "newOrderButton";
-            this.newOrderButton.Size = new System.Drawing.Size(175, 36);
+            this.newOrderButton.Size = new System.Drawing.Size(262, 55);
             this.newOrderButton.TabIndex = 14;
             this.newOrderButton.Text = "New Order";
             this.newOrderButton.UseVisualStyleBackColor = false;
@@ -192,10 +183,9 @@
             // 
             this.dividerLabel2.BackColor = System.Drawing.Color.Gold;
             this.dividerLabel2.ForeColor = System.Drawing.Color.Gold;
-            this.dividerLabel2.Location = new System.Drawing.Point(15, 337);
-            this.dividerLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dividerLabel2.Location = new System.Drawing.Point(22, 518);
             this.dividerLabel2.Name = "dividerLabel2";
-            this.dividerLabel2.Size = new System.Drawing.Size(232, 10);
+            this.dividerLabel2.Size = new System.Drawing.Size(348, 15);
             this.dividerLabel2.TabIndex = 15;
             this.dividerLabel2.Text = "label1";
             // 
@@ -208,10 +198,9 @@
             this.printReceiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printReceiptButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printReceiptButton.ForeColor = System.Drawing.Color.Gold;
-            this.printReceiptButton.Location = new System.Drawing.Point(42, 487);
-            this.printReceiptButton.Margin = new System.Windows.Forms.Padding(2);
+            this.printReceiptButton.Location = new System.Drawing.Point(63, 749);
             this.printReceiptButton.Name = "printReceiptButton";
-            this.printReceiptButton.Size = new System.Drawing.Size(175, 36);
+            this.printReceiptButton.Size = new System.Drawing.Size(262, 55);
             this.printReceiptButton.TabIndex = 19;
             this.printReceiptButton.Text = "Print Reciept";
             this.printReceiptButton.UseVisualStyleBackColor = false;
@@ -226,10 +215,9 @@
             this.calculateTotalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateTotalsButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateTotalsButton.ForeColor = System.Drawing.Color.Gold;
-            this.calculateTotalsButton.Location = new System.Drawing.Point(42, 202);
-            this.calculateTotalsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.calculateTotalsButton.Location = new System.Drawing.Point(63, 311);
             this.calculateTotalsButton.Name = "calculateTotalsButton";
-            this.calculateTotalsButton.Size = new System.Drawing.Size(175, 35);
+            this.calculateTotalsButton.Size = new System.Drawing.Size(262, 54);
             this.calculateTotalsButton.TabIndex = 20;
             this.calculateTotalsButton.Text = "Calculate Totals";
             this.calculateTotalsButton.UseVisualStyleBackColor = false;
@@ -244,10 +232,9 @@
             this.calculateChangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateChangeButton.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculateChangeButton.ForeColor = System.Drawing.Color.Gold;
-            this.calculateChangeButton.Location = new System.Drawing.Point(42, 395);
-            this.calculateChangeButton.Margin = new System.Windows.Forms.Padding(2);
+            this.calculateChangeButton.Location = new System.Drawing.Point(37, 608);
             this.calculateChangeButton.Name = "calculateChangeButton";
-            this.calculateChangeButton.Size = new System.Drawing.Size(175, 37);
+            this.calculateChangeButton.Size = new System.Drawing.Size(308, 57);
             this.calculateChangeButton.TabIndex = 21;
             this.calculateChangeButton.Text = "Calculate Change";
             this.calculateChangeButton.UseVisualStyleBackColor = false;
@@ -258,8 +245,7 @@
             this.wandNumLabel.AutoSize = true;
             this.wandNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wandNumLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.wandNumLabel.Location = new System.Drawing.Point(33, 109);
-            this.wandNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.wandNumLabel.Location = new System.Drawing.Point(50, 168);
             this.wandNumLabel.Name = "wandNumLabel";
             this.wandNumLabel.Size = new System.Drawing.Size(176, 25);
             this.wandNumLabel.TabIndex = 22;
@@ -271,8 +257,7 @@
             this.robeNumLabel.AutoSize = true;
             this.robeNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.robeNumLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.robeNumLabel.Location = new System.Drawing.Point(33, 137);
-            this.robeNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.robeNumLabel.Location = new System.Drawing.Point(50, 211);
             this.robeNumLabel.Name = "robeNumLabel";
             this.robeNumLabel.Size = new System.Drawing.Size(169, 25);
             this.robeNumLabel.TabIndex = 23;
@@ -284,8 +269,7 @@
             this.bookNumLabel.AutoSize = true;
             this.bookNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookNumLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.bookNumLabel.Location = new System.Drawing.Point(33, 166);
-            this.bookNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bookNumLabel.Location = new System.Drawing.Point(50, 255);
             this.bookNumLabel.Name = "bookNumLabel";
             this.bookNumLabel.Size = new System.Drawing.Size(168, 25);
             this.bookNumLabel.TabIndex = 24;
@@ -295,30 +279,27 @@
             // wandNumInput
             // 
             this.wandNumInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wandNumInput.Location = new System.Drawing.Point(181, 109);
-            this.wandNumInput.Margin = new System.Windows.Forms.Padding(2);
+            this.wandNumInput.Location = new System.Drawing.Point(272, 168);
             this.wandNumInput.Name = "wandNumInput";
-            this.wandNumInput.Size = new System.Drawing.Size(43, 30);
+            this.wandNumInput.Size = new System.Drawing.Size(62, 30);
             this.wandNumInput.TabIndex = 25;
             this.wandNumInput.Text = "0";
             // 
             // bookNumInput
             // 
             this.bookNumInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bookNumInput.Location = new System.Drawing.Point(181, 166);
-            this.bookNumInput.Margin = new System.Windows.Forms.Padding(2);
+            this.bookNumInput.Location = new System.Drawing.Point(272, 255);
             this.bookNumInput.Name = "bookNumInput";
-            this.bookNumInput.Size = new System.Drawing.Size(43, 30);
+            this.bookNumInput.Size = new System.Drawing.Size(62, 30);
             this.bookNumInput.TabIndex = 26;
             this.bookNumInput.Text = "0";
             // 
             // robeNumInput
             // 
             this.robeNumInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.robeNumInput.Location = new System.Drawing.Point(181, 137);
-            this.robeNumInput.Margin = new System.Windows.Forms.Padding(2);
+            this.robeNumInput.Location = new System.Drawing.Point(272, 211);
             this.robeNumInput.Name = "robeNumInput";
-            this.robeNumInput.Size = new System.Drawing.Size(43, 30);
+            this.robeNumInput.Size = new System.Drawing.Size(62, 30);
             this.robeNumInput.TabIndex = 27;
             this.robeNumInput.Text = "0";
             // 
@@ -327,8 +308,7 @@
             this.totalLabel.AutoSize = true;
             this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.totalLabel.Location = new System.Drawing.Point(39, 302);
-            this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalLabel.Location = new System.Drawing.Point(58, 465);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(62, 25);
             this.totalLabel.TabIndex = 30;
@@ -340,8 +320,7 @@
             this.taxLabel.AutoSize = true;
             this.taxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.taxLabel.Location = new System.Drawing.Point(39, 276);
-            this.taxLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taxLabel.Location = new System.Drawing.Point(58, 425);
             this.taxLabel.Name = "taxLabel";
             this.taxLabel.Size = new System.Drawing.Size(52, 25);
             this.taxLabel.TabIndex = 29;
@@ -353,8 +332,7 @@
             this.subtotalLabel.AutoSize = true;
             this.subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtotalLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.subtotalLabel.Location = new System.Drawing.Point(39, 251);
-            this.subtotalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.subtotalLabel.Location = new System.Drawing.Point(58, 386);
             this.subtotalLabel.Name = "subtotalLabel";
             this.subtotalLabel.Size = new System.Drawing.Size(90, 25);
             this.subtotalLabel.TabIndex = 28;
@@ -366,8 +344,7 @@
             this.subtotalOutput.AutoSize = true;
             this.subtotalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtotalOutput.ForeColor = System.Drawing.Color.Bisque;
-            this.subtotalOutput.Location = new System.Drawing.Point(175, 251);
-            this.subtotalOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.subtotalOutput.Location = new System.Drawing.Point(262, 386);
             this.subtotalOutput.Name = "subtotalOutput";
             this.subtotalOutput.Size = new System.Drawing.Size(0, 25);
             this.subtotalOutput.TabIndex = 31;
@@ -378,8 +355,7 @@
             this.taxAmountOutput.AutoSize = true;
             this.taxAmountOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taxAmountOutput.ForeColor = System.Drawing.Color.Bisque;
-            this.taxAmountOutput.Location = new System.Drawing.Point(175, 276);
-            this.taxAmountOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.taxAmountOutput.Location = new System.Drawing.Point(262, 425);
             this.taxAmountOutput.Name = "taxAmountOutput";
             this.taxAmountOutput.Size = new System.Drawing.Size(0, 25);
             this.taxAmountOutput.TabIndex = 32;
@@ -390,8 +366,7 @@
             this.totalOutput.AutoSize = true;
             this.totalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalOutput.ForeColor = System.Drawing.Color.Bisque;
-            this.totalOutput.Location = new System.Drawing.Point(175, 302);
-            this.totalOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalOutput.Location = new System.Drawing.Point(262, 465);
             this.totalOutput.Name = "totalOutput";
             this.totalOutput.Size = new System.Drawing.Size(0, 25);
             this.totalOutput.TabIndex = 33;
@@ -402,8 +377,7 @@
             this.tenderedLabel.AutoSize = true;
             this.tenderedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenderedLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.tenderedLabel.Location = new System.Drawing.Point(39, 359);
-            this.tenderedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.tenderedLabel.Location = new System.Drawing.Point(58, 552);
             this.tenderedLabel.Name = "tenderedLabel";
             this.tenderedLabel.Size = new System.Drawing.Size(103, 25);
             this.tenderedLabel.TabIndex = 34;
@@ -415,8 +389,7 @@
             this.changeOutput.AutoSize = true;
             this.changeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeOutput.ForeColor = System.Drawing.Color.Bisque;
-            this.changeOutput.Location = new System.Drawing.Point(178, 447);
-            this.changeOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.changeOutput.Location = new System.Drawing.Point(267, 688);
             this.changeOutput.Name = "changeOutput";
             this.changeOutput.Size = new System.Drawing.Size(0, 25);
             this.changeOutput.TabIndex = 37;
@@ -427,8 +400,7 @@
             this.changeLabel.AutoSize = true;
             this.changeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeLabel.ForeColor = System.Drawing.Color.Bisque;
-            this.changeLabel.Location = new System.Drawing.Point(39, 447);
-            this.changeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.changeLabel.Location = new System.Drawing.Point(58, 688);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(88, 25);
             this.changeLabel.TabIndex = 36;
@@ -438,10 +410,9 @@
             // tenderedInput
             // 
             this.tenderedInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenderedInput.Location = new System.Drawing.Point(181, 356);
-            this.tenderedInput.Margin = new System.Windows.Forms.Padding(2);
+            this.tenderedInput.Location = new System.Drawing.Point(272, 548);
             this.tenderedInput.Name = "tenderedInput";
-            this.tenderedInput.Size = new System.Drawing.Size(43, 30);
+            this.tenderedInput.Size = new System.Drawing.Size(62, 30);
             this.tenderedInput.TabIndex = 38;
             this.tenderedInput.Text = "0";
             // 
@@ -451,10 +422,9 @@
             this.receiptOutput.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptOutput.ForeColor = System.Drawing.Color.Black;
             this.receiptOutput.Image = global::CashRegister.Properties.Resources.Paper2;
-            this.receiptOutput.Location = new System.Drawing.Point(284, 102);
-            this.receiptOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.receiptOutput.Location = new System.Drawing.Point(426, 157);
             this.receiptOutput.Name = "receiptOutput";
-            this.receiptOutput.Size = new System.Drawing.Size(242, 325);
+            this.receiptOutput.Size = new System.Drawing.Size(363, 500);
             this.receiptOutput.TabIndex = 39;
             // 
             // glassesIcon
@@ -462,10 +432,9 @@
             this.glassesIcon.BackColor = System.Drawing.Color.Transparent;
             this.glassesIcon.BackgroundImage = global::CashRegister.Properties.Resources._2730334_colour_glasses_harry_potter_scar_icon;
             this.glassesIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.glassesIcon.Location = new System.Drawing.Point(355, 432);
-            this.glassesIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.glassesIcon.Location = new System.Drawing.Point(532, 665);
             this.glassesIcon.Name = "glassesIcon";
-            this.glassesIcon.Size = new System.Drawing.Size(101, 46);
+            this.glassesIcon.Size = new System.Drawing.Size(152, 71);
             this.glassesIcon.TabIndex = 40;
             this.glassesIcon.TabStop = false;
             // 
@@ -473,10 +442,9 @@
             // 
             this.cauldronIcon.BackgroundImage = global::CashRegister.Properties.Resources._2730328_cauldron_colour_harry_pot_potter_icon;
             this.cauldronIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cauldronIcon.Location = new System.Drawing.Point(444, 432);
-            this.cauldronIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.cauldronIcon.Location = new System.Drawing.Point(666, 665);
             this.cauldronIcon.Name = "cauldronIcon";
-            this.cauldronIcon.Size = new System.Drawing.Size(81, 46);
+            this.cauldronIcon.Size = new System.Drawing.Size(122, 71);
             this.cauldronIcon.TabIndex = 41;
             this.cauldronIcon.TabStop = false;
             // 
@@ -484,10 +452,9 @@
             // 
             this.hogwartsIcon.BackgroundImage = global::CashRegister.Properties.Resources._2730341_castle_colour_harry_hogwarts_potter_icon;
             this.hogwartsIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.hogwartsIcon.Location = new System.Drawing.Point(286, 432);
-            this.hogwartsIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.hogwartsIcon.Location = new System.Drawing.Point(429, 665);
             this.hogwartsIcon.Name = "hogwartsIcon";
-            this.hogwartsIcon.Size = new System.Drawing.Size(86, 46);
+            this.hogwartsIcon.Size = new System.Drawing.Size(129, 71);
             this.hogwartsIcon.TabIndex = 42;
             this.hogwartsIcon.TabStop = false;
             // 
@@ -496,19 +463,18 @@
             this.hiddenMessageOutput.BackColor = System.Drawing.Color.DarkRed;
             this.hiddenMessageOutput.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hiddenMessageOutput.ForeColor = System.Drawing.Color.Gold;
-            this.hiddenMessageOutput.Location = new System.Drawing.Point(280, 102);
-            this.hiddenMessageOutput.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.hiddenMessageOutput.Location = new System.Drawing.Point(420, 157);
             this.hiddenMessageOutput.Name = "hiddenMessageOutput";
-            this.hiddenMessageOutput.Size = new System.Drawing.Size(248, 325);
+            this.hiddenMessageOutput.Size = new System.Drawing.Size(372, 500);
             this.hiddenMessageOutput.TabIndex = 43;
             this.hiddenMessageOutput.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(748, 578);
+            this.ClientSize = new System.Drawing.Size(1122, 889);
             this.Controls.Add(this.hiddenMessageOutput);
             this.Controls.Add(this.hogwartsIcon);
             this.Controls.Add(this.cauldronIcon);
@@ -544,7 +510,6 @@
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.backsplashLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.gryffindorPicture1)).EndInit();
