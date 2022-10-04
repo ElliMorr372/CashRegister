@@ -90,30 +90,38 @@ namespace CashRegister
             SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.MagicalSound);
             alertPlayer.Play();
 
-            //get the inputs
-            tendered = Convert.ToDouble(tenderedInput.Text);
-
-            //Check for insufficient funds
-            if (tendered < total)
+            try
             {
-                tenderedInput.Size = new Size(130, tenderedInput.Height);
-                tenderedInput.Location = new Point(tenderedInput.Location.X - 50, tenderedInput.Location.Y);
-                tenderedInput.Text = "Insufficient Funds";
+                //get the inputs
+                tendered = Convert.ToDouble(tenderedInput.Text);
+
+                //Check for insufficient funds
+                if (tendered < total)
+                {
+                    tenderedInput.Size = new Size(130, tenderedInput.Height);
+                    tenderedInput.Location = new Point(tenderedInput.Location.X - 50, tenderedInput.Location.Y);
+                    tenderedInput.Text = "Insufficient Funds";
+                }
+                else
+                {
+                    //reset tendered input length
+                    tenderedInput.Size = new Size(43, tenderedInput.Height);
+                    tenderedInput.Location = new Point(181, 356);
+
+                    //calculate the change
+                    change = tendered - total;
+
+                    //output the change
+                    changeOutput.Text = $"{change.ToString("C")}";
+
+                    //enable receipt button
+                    printReceiptButton.Enabled = true;
+                }
             }
-            else
+            catch
             {
-                //reset tendered input length
-                tenderedInput.Size = new Size(43, tenderedInput.Height);
-                tenderedInput.Location = new Point(181, 356);
-
-                //calculate the change
-                change = tendered - total;
-
-                //output the change
-                changeOutput.Text = $"{change.ToString("C")}";
-
-                //enable receipt button
-                printReceiptButton.Enabled = true;
+                //display input error
+                tenderedInput.Text = "Error";
             }
         }
 
@@ -134,7 +142,7 @@ namespace CashRegister
                 ReceiptStrings[0] = $"      The Shop That Must";
                 ReceiptStrings[1] = $"\n        Not Be Named";
                 ReceiptStrings[2] = $"\n\n  Order Number: 717";
-                ReceiptStrings[3] = $"\n  October 3rd, 2022";
+                ReceiptStrings[3] = $"\n  October 4th, 2022";
                 ReceiptStrings[4] = $"\n\n  Wands     x{wandNum} @ {wandPrice.ToString("C")}";
                 ReceiptStrings[5] = $"\n  Robes     x{robeNum} @ {robePrice.ToString("C")}";
                 ReceiptStrings[6] = $"\n  Books     x{bookNum} @ {bookPrice.ToString("C")}";
