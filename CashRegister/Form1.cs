@@ -12,6 +12,10 @@ using System.Linq.Expressions;
 using System.Media;
 using System.Drawing.Drawing2D;
 
+//Elliana Morrison
+//October 12th, 2022
+//Simple cash register system
+
 namespace CashRegister
 {
     public partial class Form1 : Form
@@ -168,9 +172,6 @@ namespace CashRegister
                 //set receipt boolean to true
                 receiptPrinted = true;
             }
-            else
-            {
-            }
         }
 
         private void newOrderButton_Click(object sender, EventArgs e)
@@ -259,9 +260,6 @@ namespace CashRegister
                 hiddenMessageOutput.Visible = false;
                 hiddenMessageOutput.Text = $"";
                 messageShown = true;
-            }
-            else
-            {
             }
         }
     }
